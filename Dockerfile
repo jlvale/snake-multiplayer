@@ -15,6 +15,6 @@ RUN npm install --prefix /dd_tracer/node dd-trace  --save
 ENV DD_SERVICE=snake-nodejs
 ENV DD_ENV=lab
 ENV DD_VERSION=1
-ENTRYPOINT ["/"]
+ENTRYPOINT ["/app/datadog-init"]
 
-CMD ["/app/datadog-init","npm", "start"]
+CMD ["npm", "start"]
